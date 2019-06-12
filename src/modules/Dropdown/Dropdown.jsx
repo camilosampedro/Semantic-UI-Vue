@@ -315,8 +315,9 @@ export default {
     filteredOptions() {
       this.updateSelectedIndex();
     },
-    filter() {
+    filter(newValue) {
       if (this.search) {
+        this.$emit('filterChange', newValue); 
         this.resizeInput();
       }
     },
